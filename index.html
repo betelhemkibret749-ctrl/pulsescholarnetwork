@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseScholars Network | International Student Guild & Leadership Hub</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&family=Cinzel:wght@500;600;700;800;900&family=Noto+Sans+Ethiopic:wght@300;400;600;700&family=Noto+Serif+Ethiopic:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#030712',
+                            900: '#070F1E',
+                            800: '#0F172A',
+                            700: '#1E293B',
+                            600: '#334155'
+                        },
+                        house: {
+                            phoenix: '#EF4444',
+                            titan: '#3B82F6',
+                            sage: '#10B981',
+                            sol: '#F59E0B'
+                        },
+                        gold: {
+                            400: '#FACC15',
+                            500: '#EAB308',
+                            600: '#D4AF37'
+                        },
+                        pulse: '#38BDF8'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Noto Sans Ethiopic', 'sans-serif'],
+                        cinzel: ['Cinzel', 'Noto Serif Ethiopic', 'serif'],
+                        arabic: ['Cairo', 'Amiri', 'sans-serif'],
+                        amharic: ['Noto Sans Ethiopic', 'Noto Serif Ethiopic', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styling for Apex & Monolith Dark Theme */
+        body {
+            background-color: #070F1E;
+            color: #F8FAFC;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans Ethiopic', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF5C0 0%, #D4AF37 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(to bottom right, #D4AF37, #38BDF8, #1E293B) 1;
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* House Glow Effects */
+        .glow-phoenix:hover { box-shadow: 0 0 25px rgba(239, 68, 68, 0.35); border-color: rgba(239, 68, 68, 0.6); }
+        .glow-titan:hover { box-shadow: 0 0 25px rgba(59, 130, 246, 0.35); border-color: rgba(59, 130, 246, 0.6); }
+        .glow-sage:hover { box-shadow: 0 0 25px rgba(16, 185, 129, 0.35); border-color: rgba(16, 185, 129, 0.6); }
+        .glow-sol:hover { box-shadow: 0 0 25px rgba(245, 158, 11, 0.35); border-color: rgba(245, 158, 11, 0.6); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #070F1E; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
+
+        /* Typing Caret Animation */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* RTL Adjustments */
+        html[dir="rtl"] {
+            font-family: 'Cairo', 'Amiri', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-pulse selection:text-navy-950">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80 px-4 lg:px-8 py-3 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="relative w-10 h-10 flex items-center justify-center">
+                    <img src="photo_2026-07-31_07-46-23.jpg" alt="PulseScholars Shield Emblem" class="w-10 h-10 object-contain rounded drop-shadow-[0_0_8px_rgba(56,189,248,0.5)] group-hover:scale-105 transition-transform">
+                </div>
+                <div>
+                    <span class="font-cinzel text-lg font-bold tracking-wider text-slate-100 group-hover:text-pulse transition-colors block leading-tight">
+                        PULSESCHOLARS
+                    </span>
+                    <span class="text-[10px] tracking-[0.2em] text-gold-500 uppercase font-semibold block">
+                        Network
+                    </span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" data-i18n="nav-about" class="hover:text-pulse transition-colors">About</a>
+                <a href="#houses" data-i18n="nav-houses" class="hover:text-pulse transition-colors">Color Houses</a>
+                <a href="#study-lounge" data-i18n="nav-study" class="hover:text-pulse transition-colors">Study Lounge</a>
+                <a href="#programs" data-i18n="nav-programs" class="hover:text-pulse transition-colors">Programs</a>
+                <a href="#resources" data-i18n="nav-resources" class="hover:text-pulse transition-colors">Resource Hub</a>
+                <a href="#leaderboard" data-i18n="nav-leaderboard" class="hover:text-pulse transition-colors">Leaderboard</a>
+                <a href="#vibe-forum" data-i18n="nav-vibe" class="hover:text-pulse transition-colors">Vibe Forum</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                
+                <div class="relative">
+                    <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-navy-800 text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700 focus:outline-none focus:border-pulse cursor-pointer">
+                        <option value="en">🇺🇸 EN</option>
+                        <option value="am">🇪🇹 አማርኛ</option>
+                        <option value="om">🇪🇹 Oromoo</option>
+                        <option value="so">🇸🇴 Soomaali</option>
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                    </select>
+                </div>
+
+                <button onclick="toggleAuthModal()" id="authBtn" class="hidden sm:flex items-center gap-2 bg-navy-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-2 rounded-lg border border-slate-700 transition">
+                    <i class="fa-solid fa-user-shield text-pulse"></i>
+                    <span id="authBtnText" data-i18n="btn-login">Sign In</span>
+                </button>
+
+                <a href="#join-guild" data-i18n="btn-join" class="bg-gradient-to-r from-pulse to-blue-600 hover:from-blue-500 hover:to-pulse text-navy-950 font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-lg transition-all shadow-[0_0_15px_rgba(56,189,248,0.3)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)]">
+                    Join Guild
+                </a>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden text-slate-300 hover:text-white text-xl p-1">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden mt-3 pt-3 border-t border-slate-800 flex flex-col gap-3 pb-2 text-sm">
+            <a href="#about" onclick="toggleMobileMenu()" data-i18n="nav-about" class="px-2 py-1 hover:text-pulse">About</a>
+            <a href="#houses" onclick="toggleMobileMenu()" data-i18n="nav-houses" class="px-2 py-1 hover:text-pulse">Color Houses</a>
+            <a href="#study-lounge" onclick="toggleMobileMenu()" data-i18n="nav-study" class="px-2 py-1 hover:text-pulse">Study Lounge</a>
+            <a href="#programs" onclick="toggleMobileMenu()" data-i18n="nav-programs" class="px-2 py-1 hover:text-pulse">Programs</a>
+            <a href="#resources" onclick="toggleMobileMenu()" data-i18n="nav-resources" class="px-2 py-1 hover:text-pulse">Resource Hub</a>
+            <a href="#leaderboard" onclick="toggleMobileMenu()" data-i18n="nav-leaderboard" class="px-2 py-1 hover:text-pulse">Leaderboard</a>
+            <a href="#vibe-forum" onclick="toggleMobileMenu()" data-i18n="nav-vibe" class="px-2 py-1 hover:text-pulse">Vibe Forum</a>
+            <button onclick="toggleAuthModal(); toggleMobileMenu();" class="text-left px-2 py-1 text-pulse flex items-center gap-2">
+                <i class="fa-solid fa-user-shield"></i> <span data-i18n="btn-login">Sign In</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center pt-12 pb-20 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-navy-950 to-navy-950 -z-10"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pulse/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-gold-500/30 text-xs font-semibold text-gold-400 mb-6 animate-pulse">
+                <i class="fa-solid fa-crown text-gold-500"></i>
+                <span data-i18n="hero-badge">International Student Guild & Leadership Hub</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-cinzel font-bold text-slate-100 tracking-tight leading-tight mb-6">
+                <span data-i18n="hero-title-main">Empower Your Academic Journey</span> <br>
+                <span class="gold-gradient-text typing-cursor" id="heroTypingText">🎯 Master High School STEM & Beyond.</span>
+            </h1>
+
+            <p class="text-slate-400 text-base md:text-xl max-w-3xl mx-auto font-normal leading-relaxed mb-10" data-i18n="hero-subtext">
+                Connect with high school scholars across 4 gamified Color Houses. Experience 24/7 silent study sessions, peer tutoring, SAT preparation, book clubs, and entrepreneur masterclasses.
+            </p>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+                <button onclick="openHouseQuizModal()" data-i18n="btn-quiz" class="px-6 py-3.5 bg-gradient-to-r from-gold-600 to-amber-500 text-navy-950 font-bold rounded-xl text-sm uppercase tracking-wider hover:brightness-110 shadow-lg shadow-gold-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-compass text-navy-950"></i>
+                    <span>Find Your House Quiz</span>
+                </button>
+                <a href="#study-lounge" data-i18n="btn-lounge" class="px-6 py-3.5 glass-panel text-pulse border border-pulse/30 hover:bg-pulse/10 font-bold rounded-xl text-sm uppercase tracking-wider transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-headphones-simple"></i>
+                    <span>Enter Virtual Study Lounge</span>
+                </a>
+            </div>
+
+            <div class="max-w-4xl mx-auto rounded-2xl overflow-hidden glass-panel border border-slate-700/60 p-2 shadow-2xl relative group">
+                <img src="photo_2026-07-31_08-45-14.jpg" alt="PulseScholars House Banner" class="w-full h-auto rounded-xl object-cover transform group-hover:scale-[1.01] transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent flex items-end justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-xs font-mono text-pulse"><i class="fa-solid fa-circle-check"></i> Official Guild Visual Infrastructure</span>
+                    <span class="text-xs text-slate-300">Global Invite Code: PULSE2026</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12 text-center">
+                <div class="glass-card p-4 rounded-xl">
+                    <div class="text-2xl lg:text-3xl font-bold text-pulse font-mono" id="statScholars">2,480+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat-scholars">Active Scholars</div>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <div class="text-2xl lg:text-3xl font-bold text-gold-400 font-mono" id="statHours">45,200+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat-hours">Study Hours Logged</div>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <div class="text-2xl lg:text-3xl font-bold text-house-sage font-mono">28+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat-nations">Partner Nations</div>
+                </div>
+                <div class="glass-card p-4 rounded-xl">
+                    <div class="text-2xl lg:text-3xl font-bold text-house-phoenix font-mono">4</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider" data-i18n="stat-houses">Gamified Houses</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-20 px-4 bg-navy-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="about-title">
+                    About PulseScholars Guild
+                </h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-pulse to-gold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed" data-i18n="about-desc">
+                    PulseScholars Network is an international student-led online ecosystem built specifically for High School students (Grades 9 to 12). We remove academic burnout through collaborative Pomodoro study rooms, grade-specific peer mentorship, book clubs, and entrepreneurship talks.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-slate-400">
+                    <div class="text-xs font-mono text-slate-400 mb-1">GRADE 9</div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="g9-title">Freshman Navigators</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="g9-desc">
+                        Focus on adapting to high school, icebreakers, building confidence, and fundamental study routines.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-slate-300 bg-navy-800 px-2.5 py-1 rounded-md border border-slate-700">
+                        <i class="fa-solid fa-compass text-pulse mr-1"></i> Orientation & Habits
+                    </span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-house-sage">
+                    <div class="text-xs font-mono text-house-sage mb-1">GRADE 10</div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="g10-title">Skill Builders</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="g10-desc">
+                        Focus on effective study techniques, Pomodoro habit tracking, and introductory STEM projects.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-slate-300 bg-navy-800 px-2.5 py-1 rounded-md border border-slate-700">
+                        <i class="fa-solid fa-chart-line text-house-sage mr-1"></i> Habit Building
+                    </span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-house-titan">
+                    <div class="text-xs font-mono text-house-titan mb-1">GRADE 11</div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="g11-title">Challenge Champions</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="g11-desc">
+                        Focus on SAT prep, STEM masterclasses, Olympiad practice, and intensive House competitions.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-slate-300 bg-navy-800 px-2.5 py-1 rounded-md border border-slate-700">
+                        <i class="fa-solid fa-trophy text-house-titan mr-1"></i> Exam Prep & Contests
+                    </span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-gold-500">
+                    <div class="text-xs font-mono text-gold-500 mb-1">GRADE 12</div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-i18n="g12-title">Legacy Mentors</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4" data-i18n="g12-desc">
+                        Focus on university and scholarship admissions, entrepreneurship, and peer micro-tutoring.
+                    </p>
+                    <span class="inline-block text-[11px] font-semibold text-slate-300 bg-navy-800 px-2.5 py-1 rounded-md border border-slate-700">
+                        <i class="fa-solid fa-graduation-cap text-gold-500 mr-1"></i> College & Career
+                    </span>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-8 border border-slate-700">
+                <h3 class="text-2xl font-cinzel font-bold text-slate-100 mb-6 flex items-center gap-3">
+                    <i class="fa-solid fa-sitemap text-pulse"></i>
+                    <span data-i18n="exec-title">Executive Committee Architecture</span>
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-pulse/20 text-pulse flex items-center justify-center shrink-0 font-bold">1</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Founder & Executive Director</h4>
+                            <p class="text-xs text-slate-400">Leads global vision, international partnerships, and keynote speaker sessions.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-house-sage/20 text-house-sage flex items-center justify-center shrink-0 font-bold">2</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Director of Academic Programs</h4>
+                            <p class="text-xs text-slate-400">Manages daily Pomodoro focus sessions, study rooms, and quiet guidelines.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-gold-500/20 text-gold-500 flex items-center justify-center shrink-0 font-bold">3</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Director of Ambassador Growth</h4>
+                            <p class="text-xs text-slate-400">Oversees Grade 9-12 Ambassadors and manages the 4 Color House battles.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-house-titan/20 text-house-titan flex items-center justify-center shrink-0 font-bold">4</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Director of Communications</h4>
+                            <p class="text-xs text-slate-400">Handles outreach to entrepreneurs, local incubators, and school councils.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-house-phoenix/20 text-house-phoenix flex items-center justify-center shrink-0 font-bold">5</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Director of Media & Content</h4>
+                            <p class="text-xs text-slate-400">Creates promotional flyers, graphic assets, and social media campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 font-bold">6</div>
+                        <div>
+                            <h4 class="font-bold text-white text-sm">Global House Captains</h4>
+                            <p class="text-xs text-slate-400">Lead House point challenges, book clubs, and weekly Vibe Circles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="houses" class="py-20 px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="houses-title">
+                    The Four Gamified Houses
+                </h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-house-phoenix via-house-titan to-gold-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 text-sm md:text-base" data-i18n="houses-desc">
+                    Every member is sorted into one of four gamified houses. Earn points for your house through verified study hours, book reviews, peer tutoring, and team challenges!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="glass-card rounded-2xl p-6 border border-house-phoenix/30 glow-phoenix flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-house-phoenix/20 border border-house-phoenix/50 text-house-phoenix flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-fire-flame-curved"></i>
+                            </span>
+                            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-house-phoenix/10 text-house-phoenix border border-house-phoenix/30 uppercase">
+                                Crimson Red
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-cinzel font-bold text-white mb-1">Phoenix House</h3>
+                        <div class="text-xs font-bold text-house-phoenix uppercase tracking-widest mb-4">DRIVE & FOCUS</div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6" data-i18n="hp-desc">
+                            Focus, Resilience, Study Marathons. Built for students who push through long study hours with unwavering determination.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 space-y-2">
+                        <div class="flex justify-between"><span class="text-slate-400">Core Trait:</span> <span class="text-slate-200 font-semibold">Resilience & Grit</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Signature Event:</span> <span class="text-slate-200 font-semibold">24-Hour Study Marathon</span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 border border-house-titan/30 glow-titan flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-house-titan/20 border border-house-titan/50 text-house-titan flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-cube"></i>
+                            </span>
+                            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-house-titan/10 text-house-titan border border-house-titan/30 uppercase">
+                                Sapphire Blue
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-cinzel font-bold text-white mb-1">Titan House</h3>
+                        <div class="text-xs font-bold text-house-titan uppercase tracking-widest mb-4">STRATEGY & LOGIC</div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6" data-i18n="ht-desc">
+                            Logic, Problem Solving, Competition. Dominates STEM challenges, algorithmic thinking, and academic Olympiads.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 space-y-2">
+                        <div class="flex justify-between"><span class="text-slate-400">Core Trait:</span> <span class="text-slate-200 font-semibold">Analytical Logic</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Signature Event:</span> <span class="text-slate-200 font-semibold">STEM & Logic Battle</span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 border border-house-sage/30 glow-sage flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-house-sage/20 border border-house-sage/50 text-house-sage flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-feather-pointed"></i>
+                            </span>
+                            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-house-sage/10 text-house-sage border border-house-sage/30 uppercase">
+                                Emerald Green
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-cinzel font-bold text-white mb-1">Sage House</h3>
+                        <div class="text-xs font-bold text-house-sage uppercase tracking-widest mb-4">WISDOM & GROWTH</div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6" data-i18n="hs-desc">
+                            Knowledge, Book Clubs, Peer Tutoring. Scholars dedicated to deep learning, self-development books, and helping younger grades.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 space-y-2">
+                        <div class="flex justify-between"><span class="text-slate-400">Core Trait:</span> <span class="text-slate-200 font-semibold">Knowledge & Empathy</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Signature Event:</span> <span class="text-slate-200 font-semibold">Monthly Book Circle</span></div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 border border-house-sol/30 glow-sol flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="w-12 h-12 rounded-xl bg-house-sol/20 border border-house-sol/50 text-house-sol flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-sun"></i>
+                            </span>
+                            <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-house-sol/10 text-house-sol border border-house-sol/30 uppercase">
+                                Amber Gold
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-cinzel font-bold text-white mb-1">Sol House</h3>
+                        <div class="text-xs font-bold text-house-sol uppercase tracking-widest mb-4">CREATIVITY & ENERGY</div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6" data-i18n="hsol-desc">
+                            Innovation, Projects, Leadership Events. Leads startup ideas, digital content creation, and vibrant international exchanges.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-800 text-xs text-slate-400 space-y-2">
+                        <div class="flex justify-between"><span class="text-slate-400">Core Trait:</span> <span class="text-slate-200 font-semibold">Innovation & Vision</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Signature Event:</span> <span class="text-slate-200 font-semibold">Entrepreneur Pitch Night</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="study-lounge" class="py-20 px-4 bg-navy-900/80 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-mono text-pulse uppercase tracking-widest block mb-2">24/7 Global Focus Zone</span>
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="lounge-title">
+                    Virtual Co-Working Lounge
+                </h2>
+                <p class="text-slate-400 text-sm" data-i18n="lounge-subtitle">
+                    Select your background ambience, start your focus session, and boost your daily productivity.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 glass-panel p-8 rounded-3xl border border-slate-700 relative overflow-hidden shadow-2xl">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="flex items-center gap-3">
+                            <span class="relative flex h-3 w-3">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pulse opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-pulse"></span>
+                            </span>
+                            <span class="text-xs font-mono uppercase text-slate-300 font-semibold">Live Focus Room #01</span>
+                        </div>
+
+                        <div class="flex bg-navy-950 p-1 rounded-xl border border-slate-800 text-xs font-semibold">
+                            <button onclick="setTimerMode('focus')" id="modeFocus" class="px-3 py-1.5 rounded-lg bg-pulse text-navy-950 transition">Focus (25m)</button>
+                            <button onclick="setTimerMode('short')" id="modeShort" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Short Break (5m)</button>
+                            <button onclick="setTimerMode('long')" id="modeLong" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition">Long Break (15m)</button>
+                        </div>
+                    </div>
+
+                    <div class="text-center py-6">
+                        <div id="timerDisplay" class="text-6xl md:text-8xl font-mono font-extrabold text-white tracking-wider my-2 drop-shadow-[0_0_20px_rgba(56,189,248,0.3)]">
+                            25:00
+                        </div>
+                        <div id="timerLabel" class="text-xs font-mono text-slate-400 uppercase tracking-widest">
+                            Stay Disciplined • Silence Notifications
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center gap-4 mt-6">
+                        <button onclick="toggleTimer()" id="timerToggleBtn" class="px-8 py-3 bg-pulse hover:bg-sky-400 text-navy-950 font-bold rounded-xl text-sm uppercase tracking-wider transition-all shadow-lg shadow-pulse/20">
+                            Start Session
+                        </button>
+                        <button onclick="resetTimer()" class="p-3 bg-navy-800 hover:bg-slate-700 text-slate-300 rounded-xl text-sm transition">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-800/80">
+                        <div class="text-xs font-semibold text-slate-400 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-music text-gold-500"></i> Ambient Audio Preset:
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button onclick="setAudioTrack('lofi')" class="audio-btn p-2.5 rounded-lg glass-card text-xs text-slate-300 hover:border-pulse flex items-center justify-center gap-2" id="soundLofi">
+                                <i class="fa-solid fa-headphones"></i> Lo-Fi Beats
+                            </button>
+                            <button onclick="setAudioTrack('waves')" class="audio-btn p-2.5 rounded-lg glass-card text-xs text-slate-300 hover:border-pulse flex items-center justify-center gap-2" id="soundWaves">
+                                <i class="fa-solid fa-brain"></i> Alpha Waves
+                            </button>
+                            <button onclick="setAudioTrack('rain')" class="audio-btn p-2.5 rounded-lg glass-card text-xs text-slate-300 hover:border-pulse flex items-center justify-center gap-2" id="soundRain">
+                                <i class="fa-solid fa-cloud-rain"></i> Rain Sounds
+                            </button>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-pulse">
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-pulse"></i> Study Code of Ethics
+                        </h3>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+                            <li>Keep microphones muted in silent study channels.</li>
+                            <li>Log your completed 25-minute Pomodoro blocks to earn House Points.</li>
+                            <li>Respect peer scholars across all international time zones.</li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-gold-500">
+                        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-lightbulb text-gold-500"></i> High-Efficiency Study Clues
+                        </h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            <strong class="text-white">Active Recall & Spaced Repetition:</strong> Don't just re-read notes. Test yourself after every Pomodoro block and summarize key formulas without looking at your book!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-mono text-gold-500 uppercase tracking-widest block mb-2">Member Exclusive Access</span>
+                    <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100" data-i18n="prog-title">
+                        Academic & Entrepreneur Programs
+                    </h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold">
+                        <i class="fa-solid fa-lock"></i> Mandatory Sign-In Required for Full Video Curriculum
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 aspect-video bg-navy-950 flex items-center justify-center border border-slate-800">
+                            <i class="fa-brands fa-youtube text-4xl text-red-500 group-hover:scale-110 transition-transform"></i>
+                            <div class="absolute bottom-2 right-2 bg-navy-950/80 px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">4 Modules</div>
+                        </div>
+                        <span class="text-[10px] font-mono text-pulse uppercase font-semibold">STEM Masterclass</span>
+                        <h3 class="text-lg font-bold text-white my-1">High School SAT Math & Physics Blitz</h3>
+                        <p class="text-xs text-slate-400 mb-4">
+                            Master algebraic strategies, geometry shortcuts, and Newtonian mechanics with step-by-step video tutorials.
+                        </p>
+                    </div>
+                    <button onclick="window.open('https://youtu.be/xX27kssYDe0', '_blank')" class="w-full py-2.5 rounded-lg bg-navy-800 hover:bg-pulse hover:text-navy-950 border border-slate-700 text-xs font-bold text-slate-200 transition flex items-center justify-center gap-2 cursor-pointer">
+    <i class="fa-solid fa-play"></i> Watch Curriculum
+</button>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 aspect-video bg-navy-950 flex items-center justify-center border border-slate-800">
+                            <i class="fa-solid fa-rocket text-4xl text-gold-500 group-hover:scale-110 transition-transform"></i>
+                            <div class="absolute bottom-2 right-2 bg-navy-950/80 px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">Executive Series</div>
+                        </div>
+                        <span class="text-[10px] font-mono text-gold-500 uppercase font-semibold">Leadership & Startups</span>
+                        <h3 class="text-lg font-bold text-white my-1">Youth Entrepreneur Pitch Incubator</h3>
+                        <p class="text-xs text-slate-400 mb-4">
+                            Learn directly from tech founders under 25 on how to build software, pitch to incubators, and win grants.
+                        </p>
+                    </div>
+                   <button onclick="window.open('https://youtu.be/C_g1xr2XG98', '_blank')" class="w-full py-2.5 rounded-lg bg-navy-800 hover:bg-gold-500 hover:text-navy-950 border border-slate-700 text-xs font-bold text-slate-200 transition flex items-center justify-center gap-2">
+  <i class="fa-solid fa-play"></i> Watch Curriculum
+</button>
+                    </button>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700 flex flex-col justify-between group">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 aspect-video bg-navy-950 flex items-center justify-center border border-slate-800">
+                            <i class="fa-solid fa-brain text-4xl text-house-sage group-hover:scale-110 transition-transform"></i>
+                            <div class="absolute bottom-2 right-2 bg-navy-950/80 px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">Self-Growth</div>
+                        </div>
+                        <span class="text-[10px] font-mono text-house-sage uppercase font-semibold">Habit Mastery</span>
+                        <h3 class="text-lg font-bold text-white my-1">Atomic Habits for High Schoolers</h3>
+                        <p class="text-xs text-slate-400 mb-4">
+                            Practical breakdown of James Clear’s habit loops tailored to high school exams and avoiding burnout.
+                        </p>
+                    </div>
+                   <button onclick="window.open('https://youtu.be/PmvhH6R-H44', '_blank')" class="w-full py-2.5 rounded-lg bg-navy-800 hover:bg-house-sage hover:text-navy-950 border border-slate-700 text-xs font-bold text-slate-200 transition flex items-center justify-center gap-2">
+  <i class="fa-solid fa-play"></i> Watch Curriculum
+</button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="resources" class="py-20 px-4 bg-navy-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="res-title">
+                    Scholars Resource Vault
+                </h2>
+                <p class="text-slate-400 text-sm" data-i18n="res-subtitle">
+                    Download verified templates, exam planners, book summaries, and pitch decks.
+                </p>
+            </div>
+
+            <div class="max-w-xl mx-auto mb-10 flex gap-2">
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="resourceSearch" onkeyup="filterResources()" placeholder="Search SAT prep, Atomic Habits, pitch template..." class="w-full pl-10 pr-4 py-3 bg-navy-950 rounded-xl border border-slate-700 text-sm text-slate-200 focus:outline-none focus:border-pulse">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="resourceGrid">
+                
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="atomic habits book summary habit loop clear">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-house-sage uppercase font-bold"><i class="fa-solid fa-book"></i> Book Summary</span>
+                        <span class="text-[10px] text-slate-400">PDF Guide</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Atomic Habits Summary & Workbook</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Comprehensive summary of James Clear's 4-step habit model designed specifically for high school study schedules.
+                    </p>
+                    <a href="https://jamesclear.com/atomic-habits" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-pulse hover:underline">
+                        <i class="fa-solid fa-download"></i> Download Summary & Guide
+                    </a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="sat exam planner tracker test study prep">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-pulse uppercase font-bold"><i class="fa-solid fa-calendar-check"></i> Study Tracker</span>
+                        <span class="text-[10px] text-slate-400">Notion / Sheet</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">SAT / ACT 12-Week Study Planner</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Structured weekly study tracker with error-log templates and formula flashcard routines for standardized tests.
+                    </p>
+                    <a href="https://www.collegeboard.org" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-pulse hover:underline">
+                        <i class="fa-solid fa-download"></i> Access SAT Planner
+                    </a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="entrepreneur pitch template speaker email outreach">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-gold-500 uppercase font-bold"><i class="fa-solid fa-file-signature"></i> Outreach Script</span>
+                        <span class="text-[10px] text-slate-400">Doc Template</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Entrepreneur & Speaker Pitch Template</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Professional email & LinkedIn outreach templates to invite local startup founders and scholars for guest talks.
+                    </p>
+                    <button onclick="copyPitchTemplate()" class="inline-flex items-center gap-2 text-xs font-bold text-gold-400 hover:underline">
+                        <i class="fa-solid fa-copy"></i> Copy Outreach Script
+                    </button>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="7 habits highly effective teens coveo book">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-house-sage uppercase font-bold"><i class="fa-solid fa-book"></i> Recommended Reading</span>
+                        <span class="text-[10px] text-slate-400">Reading List</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">The 7 Habits of Highly Effective Teens</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Sean Covey’s framework for time management, resisting peer pressure, and building long-term balance.
+                    </p>
+                    <span class="text-xs font-semibold text-slate-300 bg-navy-950 px-2.5 py-1 rounded border border-slate-800">Available in Sage Book Club</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="deep work cal newport study focus">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-house-sage uppercase font-bold"><i class="fa-solid fa-book"></i> Productivity Book</span>
+                        <span class="text-[10px] text-slate-400">Summary</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">Deep Work by Cal Newport Notes</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Eliminating digital distractions and mastering high-efficiency focus sessions during exam seasons.
+                    </p>
+                    <span class="text-xs font-semibold text-slate-300 bg-navy-950 px-2.5 py-1 rounded border border-slate-800">Available in Phoenix Lounge</span>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl resource-item" data-keywords="how to win friends dale carnegie relationships">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-mono text-house-sage uppercase font-bold"><i class="fa-solid fa-book"></i> Social Skills</span>
+                        <span class="text-[10px] text-slate-400">Key Takeaways</span>
+                    </div>
+                    <h3 class="font-bold text-white text-base mb-2">How to Win Friends & Influence People</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Essential communication, active listening, and genuine empathy techniques for high school leaders.
+                    </p>
+                    <span class="text-xs font-semibold text-slate-300 bg-navy-950 px-2.5 py-1 rounded border border-slate-800">Available in Sol Guild</span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="leaderboard" class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <span class="text-xs font-mono text-gold-500 uppercase tracking-widest block mb-2">Season 2026 Standings</span>
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="lead-title">
+                    Global House Leaderboard
+                </h2>
+                <p class="text-slate-400 text-sm" data-i18n="lead-subtitle">
+                    Points are updated daily based on verified study hours, book reviews, and logic competitions!
+                </p>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-6 md:p-8 border border-slate-700 shadow-2xl space-y-6">
+                
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-white text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-fire-flame-curved text-house-phoenix"></i> House Phoenix
+                        </span>
+                        <span class="font-mono text-xs font-bold text-house-phoenix">14,850 Points</span>
+                    </div>
+                    <div class="w-full h-3 bg-navy-950 rounded-full overflow-hidden border border-slate-800">
+                        <div class="h-full bg-house-phoenix transition-all duration-1000" style="width: 88%;"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-white text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-cube text-house-titan"></i> House Titan
+                        </span>
+                        <span class="font-mono text-xs font-bold text-house-titan">13,420 Points</span>
+                    </div>
+                    <div class="w-full h-3 bg-navy-950 rounded-full overflow-hidden border border-slate-800">
+                        <div class="h-full bg-house-titan transition-all duration-1000" style="width: 79%;"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-white text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-feather-pointed text-house-sage"></i> House Sage
+                        </span>
+                        <span class="font-mono text-xs font-bold text-house-sage">12,110 Points</span>
+                    </div>
+                    <div class="w-full h-3 bg-navy-950 rounded-full overflow-hidden border border-slate-800">
+                        <div class="h-full bg-house-sage transition-all duration-1000" style="width: 71%;"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-bold text-white text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-sun text-house-sol"></i> House Sol
+                        </span>
+                        <span class="font-mono text-xs font-bold text-house-sol">11,940 Points</span>
+                    </div>
+                    <div class="w-full h-3 bg-navy-950 rounded-full overflow-hidden border border-slate-800">
+                        <div class="h-full bg-house-sol transition-all duration-1000" style="width: 68%;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="vibe-forum" class="py-20 px-4 bg-navy-900/60 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-mono text-pulse uppercase tracking-widest block mb-2">Weekend Audio Circles & Free Chat</span>
+                <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-slate-100 mb-4" data-i18n="vibe-title">
+                    Vibe Forum & Student Circle
+                </h2>
+                <p class="text-slate-400 text-sm" data-i18n="vibe-subtitle">
+                    A safe, disciplined environment for high school scholars to talk freely, share weekly wins, and reflect on non-academic growth under strict moderation guidelines.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-gold-500">
+                        <h3 class="font-bold text-white text-sm mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-gold-500"></i> Weekly Reflection Prompts
+                        </h3>
+                        <div class="space-y-3 text-xs text-slate-300">
+                            <p><strong>Academic Win:</strong> "What was your biggest study victory this week, and what failure did you learn from?"</p>
+                            <p><strong>Life Lessons:</strong> "If you could give one piece of advice to yourself at the start of this year, what would it be?"</p>
+                            <p><strong>Non-Academic Goal:</strong> "What non-academic habit are you trying to build right now?"</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-pulse">
+                        <h3 class="font-bold text-white text-sm mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-scale-balanced text-pulse"></i> Discipline Guidelines
+                        </h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            All posts are moderated. Maintain genuine empathy, strictly prohibit spam or inappropriate content, and treat every scholar with international respect.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 glass-panel p-6 rounded-2xl border border-slate-700 flex flex-col h-[420px]">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                        <span class="text-xs font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-users text-house-sage"></i> #main-chat-vibe-lounge
+                        </span>
+                        <span class="text-[10px] font-mono text-slate-400">Live Community Stream</span>
+                    </div>
+
+                    <div class="flex-1 overflow-y-auto py-4 space-y-4 pr-2" id="forumFeed">
+                        <div class="flex items-start gap-3 text-xs">
+                            <div class="w-7 h-7 rounded-full bg-house-phoenix/20 border border-house-phoenix text-house-phoenix flex items-center justify-center font-bold shrink-0">A</div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-white">Amina (Grade 11 • House Phoenix)</span>
+                                    <span class="text-[10px] text-slate-500">10m ago</span>
+                                </div>
+                                <p class="text-slate-300 mt-1">Just completed 4 Pomodoro blocks for SAT Physics! Feeling ready for the weekend study marathon 🚀</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 text-xs">
+                            <div class="w-7 h-7 rounded-full bg-house-titan/20 border border-house-titan text-house-titan flex items-center justify-center font-bold shrink-0">K</div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-white">Kebede (Grade 12 • House Titan)</span>
+                                    <span class="text-[10px] text-slate-500">25m ago</span>
+                                </div>
+                                <p class="text-slate-300 mt-1">Anyone interested in a peer tutoring session on calculus integration tomorrow?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-800 flex gap-2">
+                        <input type="text" id="forumInput" placeholder="Share a reflection or post a study goal..." class="flex-1 bg-navy-950 px-4 py-2.5 rounded-xl border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-pulse">
+                        <button onclick="postForumMessage()" class="px-4 py-2.5 bg-pulse text-navy-950 font-bold text-xs rounded-xl hover:bg-sky-400 transition">
+                            Post
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="join-guild" class="bg-navy-950 pt-16 pb-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="photo_2026-07-31_07-46-23.jpg" alt="PulseScholars Monogram" class="w-8 h-8 object-contain">
+                        <span class="font-cinzel text-lg font-bold text-slate-100">PulseScholars Network</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        International student guild and high school leadership hub empowering scholars across national and global borders through peer co-studying and gamification.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Official Channels</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-300">
+                        <li>
+                            <a href="https://t.me/pulsescholarnetwork" target="_blank" class="hover:text-pulse flex items-center gap-2">
+                                <i class="fa-brands fa-telegram text-sky-400"></i> Telegram: @pulsescholarnetwork
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/pulsescholarnetwork" target="_blank" class="hover:text-pulse flex items-center gap-2">
+                                <i class="fa-brands fa-instagram text-pink-400"></i> Instagram: @pulsescholarnetwork
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:pulsescholarnetwork@gmail.com" class="hover:text-pulse flex items-center gap-2">
+                                <i class="fa-solid fa-envelope text-gold-500"></i> email: pulsescholarnetwork@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#about" class="hover:text-white">About Executive Team</a></li>
+                        <li><a href="#houses" class="hover:text-white">The Four Color Houses</a></li>
+                        <li><a href="#study-lounge" class="hover:text-white">Virtual Focus Lounge</a></li>
+                        <li><a href="#resources" class="hover:text-white">Resource Vault & Books</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Global Invite Link</h4>
+                    <div class="glass-panel p-3 rounded-xl border border-slate-800 text-xs space-y-2">
+                        <span class="text-slate-400 block">Copy official access link:</span>
+                        <div class="font-mono text-pulse bg-navy-900 p-2 rounded text-[11px] truncate select-all">
+                            linktr.ee/pulsescholarnetwork
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-800/80 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    &copy; 2026 PulseScholars Network. All rights reserved. International Student Guild.
+                </div>
+                <div class="flex gap-4">
+                    <span>Privacy Policy</span>
+                    <span>Community Charter</span>
+                    <span>Terms of Conduct</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <div id="quizModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel p-6 md:p-8 rounded-3xl border border-slate-700 max-w-lg w-full relative">
+            <button onclick="closeHouseQuizModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quizContent">
+                <span class="text-xs font-mono text-gold-500 uppercase tracking-widest block mb-2">Sorting Quiz</span>
+                <h3 class="text-xl font-cinzel font-bold text-white mb-4">Find Your House</h3>
+                <p class="text-xs text-slate-300 mb-6">What describes your primary mindset when studying?</p>
+                <div class="space-y-3">
+                    <button onclick="submitQuiz('Phoenix')" class="w-full text-left p-3 rounded-xl glass-card border border-house-phoenix/30 hover:bg-house-phoenix/10 text-xs font-semibold text-slate-200">
+                        🔥 High intensity study marathons and pushing through fatigue.
+                    </button>
+                    <button onclick="submitQuiz('Titan')" class="w-full text-left p-3 rounded-xl glass-card border border-house-titan/30 hover:bg-house-titan/10 text-xs font-semibold text-slate-200">
+                        🧩 Analytical problem solving, STEM logic, and academic contests.
+                    </button>
+                    <button onclick="submitQuiz('Sage')" class="w-full text-left p-3 rounded-xl glass-card border border-house-sage/30 hover:bg-house-sage/10 text-xs font-semibold text-slate-200">
+                        📚 Reading deep non-fiction books and tutoring younger classmates.
+                    </button>
+                    <button onclick="submitQuiz('Sol')" class="w-full text-left p-3 rounded-xl glass-card border border-house-sol/30 hover:bg-house-sol/10 text-xs font-semibold text-slate-200">
+                        💡 Pitching creative startup ideas and organizing global events.
+                    </button>
+                </div>
+            </div>
+            <div id="quizResult" class="hidden text-center py-4 space-y-4">
+                <i class="fa-solid fa-crown text-4xl text-gold-500"></i>
+                <h4 class="text-2xl font-cinzel font-bold text-white" id="quizResultTitle">House Phoenix Assigned!</h4>
+                <p class="text-xs text-slate-300" id="quizResultDesc">Welcome to the crimson guild of focus and study marathons.</p>
+                <button onclick="closeHouseQuizModal()" class="px-6 py-2.5 bg-pulse text-navy-950 font-bold rounded-xl text-xs uppercase">Join House Channel</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="authModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel p-6 md:p-8 rounded-3xl border border-slate-700 max-w-md w-full relative">
+            <button onclick="toggleAuthModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <img src="photo_2026-07-31_07-46-23.jpg" alt="Logo" class="w-12 h-12 mx-auto mb-2">
+                <h3 class="text-xl font-cinzel font-bold text-white">Sign In to PulseScholars</h3>
+                <p class="text-xs text-slate-400">Access video programs, study rooms, and house rankings</p>
+            </div>
+            <form onsubmit="handleAuthSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name / Student Name</label>
+                    <input type="text" id="authName" required placeholder="e.g. Samuel Bekele" class="w-full px-4 py-2.5 bg-navy-950 rounded-xl border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-pulse">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Grade Level</label>
+                    <select id="authGrade" class="w-full px-4 py-2.5 bg-navy-950 rounded-xl border border-slate-700 text-xs text-slate-200 focus:outline-none focus:border-pulse">
+                        <option value="Grade 9">Grade 9 (Freshman Navigator)</option>
+                        <option value="Grade 10">Grade 10 (Skill Builder)</option>
+                        <option value="Grade 11">Grade 11 (Challenge Champion)</option>
+                        <option value="Grade 12">Grade 12 (Legacy Mentor)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-pulse to-blue-600 text-navy-950 font-bold rounded-xl text-xs uppercase tracking-wider">
+                    Sign In & Unlock Programs
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // MULTILINGUAL LOCALIZATION DICTIONARIES
+        const translations = {
+            en: {
+                "nav-about": "About",
+                "nav-houses": "Color Houses",
+                "nav-study": "Study Lounge",
+                "nav-programs": "Programs",
+                "nav-resources": "Resource Hub",
+                "nav-leaderboard": "Leaderboard",
+                "nav-vibe": "Vibe Forum",
+                "btn-login": "Sign In",
+                "btn-join": "Join Guild",
+                "hero-badge": "International Student Guild & Leadership Hub",
+                "hero-title-main": "Empower Your Academic Journey",
+                "hero-subtext": "Connect with high school scholars across 4 gamified Color Houses. Experience 24/7 silent study sessions, peer tutoring, SAT preparation, book clubs, and entrepreneur masterclasses.",
+                "btn-quiz": "Find Your House Quiz",
+                "btn-lounge": "Enter Virtual Study Lounge",
+                "stat-scholars": "Active Scholars",
+                "stat-hours": "Study Hours Logged",
+                "stat-nations": "Partner Nations",
+                "stat-houses": "Gamified Houses",
+                "about-title": "About PulseScholars Guild",
+                "about-desc": "PulseScholars Network is an international student-led online ecosystem built specifically for High School students (Grades 9 to 12). We remove academic burnout through collaborative Pomodoro study rooms, grade-specific peer mentorship, book clubs, and entrepreneurship talks.",
+                "g9-title": "Freshman Navigators",
+                "g9-desc": "Focus on adapting to high school, icebreakers, building confidence, and fundamental study routines.",
+                "g10-title": "Skill Builders",
+                "g10-desc": "Focus on effective study techniques, Pomodoro habit tracking, and introductory STEM projects.",
+                "g11-title": "Challenge Champions",
+                "g11-desc": "Focus on SAT prep, STEM masterclasses, Olympiad practice, and intensive House competitions.",
+                "g12-title": "Legacy Mentors",
+                "g12-desc": "Focus on university and scholarship admissions, entrepreneurship, and peer micro-tutoring.",
+                "exec-title": "Executive Committee Architecture",
+                "houses-title": "The Four Gamified Houses",
+                "houses-desc": "Every member is sorted into one of four gamified houses. Earn points for your house through verified study hours, book reviews, peer tutoring, and team challenges!",
+                "hp-desc": "Focus, Resilience, Study Marathons. Built for students who push through long study hours with unwavering determination.",
+                "ht-desc": "Logic, Problem Solving, Competition. Dominates STEM challenges, algorithmic thinking, and academic Olympiads.",
+                "hs-desc": "Knowledge, Book Clubs, Peer Tutoring. Scholars dedicated to deep learning, self-development books, and helping younger grades.",
+                "hsol-desc": "Innovation, Projects, Leadership Events. Leads startup ideas, digital content creation, and vibrant international exchanges.",
+                "lounge-title": "Virtual Co-Working Lounge",
+                "lounge-subtitle": "Select your background ambience, start your focus session, and boost your daily productivity.",
+                "prog-title": "Academic & Entrepreneur Programs",
+                "res-title": "Scholars Resource Vault",
+                "res-subtitle": "Download verified templates, exam planners, book summaries, and pitch decks.",
+                "lead-title": "Global House Leaderboard",
+                "lead-subtitle": "Points are updated daily based on verified study hours, book reviews, and logic competitions!",
+                "vibe-title": "Vibe Forum & Student Circle",
+                "vibe-subtitle": "A safe, disciplined environment for high school scholars to talk freely, share weekly wins, and reflect on non-academic growth under strict moderation guidelines."
+            },
+            am: {
+                "nav-about": "ስለ እኛ",
+                "nav-houses": "የቀለም ቤቶች",
+                "nav-study": "የጥናት ክፍል",
+                "nav-programs": "ፕሮግራሞች",
+                "nav-resources": "የመረጃ ማዕከል",
+                "nav-leaderboard": "የደረጃ ሰንጠረዥ",
+                "nav-vibe": "የተማሪዎች መድረክ",
+                "btn-login": "ግቡ",
+                "btn-join": "አባል ይሁኑ",
+                "hero-badge": "ዓለም አቀፍ የተማሪዎች ማህበር እና የክህሎት ማዕከል",
+                "hero-title-main": "የትምህርት ጉዞዎን ያፋጥኑ",
+                "hero-subtext": "በ4 የቀለም ቤቶች ውስጥ ከተማሪዎች ጋር ይገናኙ። የ24 საათ ጥናት ክፍሎች፣ የSAT ዝግጅት፣ የመጽሐፍ ክለቦች እና የኢንተርፕረነርሺፕ ስልጠናዎችን ያግኙ።",
+                "btn-quiz": "የእርስዎን ቤት ይወቁ",
+                "btn-lounge": "ወደ ጥናት ክፍል ይግቡ",
+                "stat-scholars": "ንቁ ተማሪዎች",
+                "stat-hours": "የተጠኑ ሰዓታት",
+                "stat-nations": "አጋር ሀገራት",
+                "stat-houses": "የቀለም ቤቶች",
+                "about-title": "ስለ ፐልስ ስኮላርስ ማህበር",
+                "about-desc": "ፐልስ ስኮላርስ ኔትወርክ ከ9ኛ እስከ 12ኛ ክፍል ላሉ ተማሪዎች የተዘጋጀ ዓለም አቀፍ የመስመር ላይ መድረክ ነው። የጥናት ክፍሎችን፣ የምክር አገልግሎትን እና የክህሎት ማሳደጊያዎችን ያቀርባል።",
+                "g9-title": "የ9ኛ ክፍል መሪዎች",
+                "g9-desc": "ከትምህርት ቤት ጋር ለመላመድ፣ በራስ መተማመንን ለማሳደግ እና የጥናት ልምዶችን ለመገንባት ያግዛል።",
+                "g10-title": "የክህሎት ግንባታ (10ኛ)",
+                "g10-desc": "ውጤታማ የጥናት ዘዴዎች እና የፖሞዶሮ ልምዶች ላይ ያተኩራል።",
+                "g11-title": "የፈተና አሸናፊዎች (11ኛ)",
+                "g11-desc": "በSAT ዝግጅት፣ በSTEM እና በውድድሮች ላይ ያተኩራል።",
+                "g12-title": "የዩኒቨርሲቲ አጋሮች (12ኛ)",
+                "g12-desc": "የዩኒቨርሲቲ እና የትምህርት እድሎች እንዲሁም ስራ ፈጠራ ላይ ያተኩራል።",
+                "exec-title": "የስራ መሪዎች መዋቅር",
+                "houses-title": "አራቱ የቀለም ቤቶች",
+                "houses-desc": "እያንዳንዱ አባል በአራቱ ቤቶች ውስጥ ይመደባል። በማጠናት፣ በመጽሐፍ ንባብ እና በውድድሮች ነጥብ ያከማቹ!",
+                "hp-desc": "ፊኒክስ ቤት - ትኩረት እና ፅናት። ለረጅም ሰዓታት ለሚያጠኑ ተማሪዎች የተዘጋጀ።",
+                "ht-desc": "ታይታን ቤት - ስትራቴጂ እና ሎጂክ። በSTEM ውድድሮች እና በሎጂክ የበላይነት አለው።",
+                "hs-desc": "ሴጅ ቤት - እውቀት እና እድገት። ለመጽሐፍ ክለብ እና ለአጋር ትምህርት የተሰጠ።",
+                "hsol-desc": "ሶል ቤት - ፈጠራ እና አመራር። ለስራ ፈጠራ እና ለዲጂታል ዝግጅቶች መሪ።",
+                "lounge-title": "የጥናት እና የትኩረት ማዕከል",
+                "lounge-subtitle": "የጀርባ ድምፅ ይምረጡ፣ የጥናት ጊዜዎን ይጀምሩ እና ውጤታማ ይሁኑ።",
+                "prog-title": "የትምህርት እና የሥራ ፈጠራ ፕሮግራሞች",
+                "res-title": "የመረጃ እና የመጻሕፍት ማዕከል",
+                "res-subtitle": "የጥናት እቅዶችን፣ የመጽሐፍ ጭምቆችን እና አብነቶችን ያውርዱ።",
+                "lead-title": "የዓለም አቀፍ ቤቶች ደረጃ",
+                "lead-subtitle": "ነጥቦች በቀን በጥናት ሰዓታት እና በውድድሮች ይዘምናሉ።",
+                "vibe-title": "የተማሪዎች ነፃ ውይይት መድረክ",
+                "vibe-subtitle": "ተማሪዎች ሀሳባቸውን በስነ-ስርዓት የሚያካፍሉበት እና የሚወያዩበት መድረክ።"
+            },
+            om: {
+                "nav-about": "Skeena",
+                "nav-houses": "Manneen Halluu",
+                "nav-study": "Kuta Qorannoo",
+                "nav-programs": "Sagantaalee",
+                "nav-resources": "Galmee Deeggarsa",
+                "nav-leaderboard": "Gubbaa Sadarkaa",
+                "nav-vibe": "Marii Barattootaa",
+                "btn-login": "Seeni",
+                "btn-join": "Oromoo Gamtaa",
+                "hero-badge": "Gamtaa Barattoota Idil-addunyaa",
+                "hero-title-main": "Imala Barnoota Keessan Camsaa",
+                "hero-subtext": "Manneen halluu 4 keessatti barattoota idil-addunyaa waliin walqunnamaa.",
+                "btn-quiz": "Mana Keessan Baradaa",
+                "btn-lounge": "Kuta Qorannootti Seenaa",
+                "stat-scholars": "Barattoota Hirmataan",
+                "stat-hours": "Sa'aatii Qorannoo",
+                "stat-nations": "Biyyoota Hirpaa",
+                "stat-houses": "Manneen Halluu",
+                "about-title": "Waae PulseScholars Network",
+                "about-desc": "PulseScholars Network sirna toora interneetii barattoota kutaa 9-12 tiif qopha'eedha.",
+                "g9-title": "Kutaa 9",
+                "g9-desc": "Aadaa sadarkaa 2ffaa fi amala qorannoo irratti xiyyeeffata.",
+                "g10-title": "Kutaa 10",
+                "g10-desc": "Malleen qorannoo bu'a qabeessa fi Pomodoro irratti xiyyeeffata.",
+                "g11-title": "Kutaa 11",
+                "g11-desc": "Qophii SAT, STEM fi dorgommiilee irratti xiyyeeffata.",
+                "g12-title": "Kutaa 12",
+                "g12-desc": "Qophii Yuunivarsiitii fi carraa barnootaa irratti xiyyeeffata.",
+                "exec-title": "Caasaa Hoogganitoota",
+                "houses-title": "Manneen Halluu Afran",
+                "houses-desc": "Miseensi hundi manneen halluu afran keessaa tokkoon ramadama.",
+                "hp-desc": "Mana Phoenix - Cichoomina fi xiyyeeffannoo.",
+                "ht-desc": "Mana Titan - Strateejii fi Loojikii.",
+                "hs-desc": "Mana Sage - Beekumsa fi Guddina.",
+                "hsol-desc": "Mana Sol - Kalaqa fi Hooggansa.",
+                "lounge-title": "Kuta Qorannoo Virtual",
+                "lounge-subtitle": "Sagalee duubbee filachuun sa'aatii qorannoo keessan jalqabaa.",
+                "prog-title": "Sagantaalee Barnoota fi Intorpranaarshippii",
+                "res-title": "Galmee Barruulee fi Kitaabotaa",
+                "res-subtitle": "Qophiilee fi gabaasota kitaabaa fe'adhaa.",
+                "lead-title": "Sadarkaa Manneen Halluu",
+                "lead-subtitle": "Qabxiileen sa'aatii qorannoon guyyaa guyyaan haaraomsamu.",
+                "vibe-title": "Marii Barattootaa Nadhii",
+                "vibe-subtitle": "Bakka barattooni amala gaariin yaada isaanii walalmaan."
+            },
+            so: {
+                "nav-about": "Mawduuca",
+                "nav-houses": "Guryaha Midabada",
+                "nav-study": "Qolka Waxbarashada",
+                "nav-programs": "Barnaamijyada",
+                "nav-resources": "Xubnaha Kheyraadka",
+                "nav-leaderboard": "Hogaanka Sadarrada",
+                "nav-vibe": "Fagaaraha Ardayda",
+                "btn-login": "Galid",
+                "btn-join": "Ku Biir",
+                "hero-badge": "Isku-dhafka Ardayda Caalamiga ah",
+                "hero-title-main": "Awood sii Safarkaaga Waxbarasho",
+                "hero-subtext": "Kula xiriir ardayda dugsiyada sare 4-ta guryo ee midabada ah.",
+                "btn-quiz": "Raadi Gurigaaga",
+                "btn-lounge": "Gal Qolka Waxbarashada",
+                "stat-scholars": "Ardayda Firfircoon",
+                "stat-hours": "Saacadaha Waxbarashada",
+                "stat-nations": "Wadammada Bahda ah",
+                "stat-houses": "Guryaha Midabada",
+                "about-title": "Ku Saabsan PulseScholars Network",
+                "about-desc": "PulseScholars Network waa shabakad caalami ah oo loogu talagalay ardayda dugsiyada sare (Fasallada 9-12).",
+                "g9-title": "Fasalka 9",
+                "g9-desc": "Laxyada la qabsashada dugsiga sare iyo caadooyinka waxbarasho.",
+                "g10-title": "Fasalka 10",
+                "g10-desc": "Xirfadaha waxbarasho iyo nidaamka Pomodoro.",
+                "g11-title": "Fasalka 11",
+                "g11-desc": "Diyaarinta imtixaanka SAT iyo tartamada STEM.",
+                "g12-title": "Fasalka 12",
+                "g12-desc": "Diyaarinta jaamacadaha iyo fursadaha waxbarasho.",
+                "exec-title": "Dhismaha Hogaanka",
+                "houses-title": "Afar Guryo ee Midabada",
+                "houses-desc": "Xubin kasta wuxuu ku jiraa mid ka mid ah 4-ta guryo midabada ah.",
+                "hp-desc": "Guriga Phoenix - Dadal iyo Xooga saarid.",
+                "ht-desc": "Guriga Titan - Xisaab iyo Loojik.",
+                "hs-desc": "Guriga Sage - Aqoonta iyo Korriinka.",
+                "hsol-desc": "Guriga Sol - Abuurista iyo Hogaaminta.",
+                "lounge-title": "Qolka Waxbarashada Caalamiga ah",
+                "lounge-subtitle": "Dooro codadka dabiiciga ah oo bilaab saacadahaaga.",
+                "prog-title": "Barnaamijyada Aqoonta iyo Ganacsiga",
+                "res-title": "Maktabada Kheyraadka",
+                "res-subtitle": "Daji shaqooyinka iyo buugaagta muhiimka ah.",
+                "lead-title": "Hogaanka Sadarrada",
+                "lead-subtitle": "Qodobada waxaa lagu cusbooneysiiyaa maalin kasta.",
+                "vibe-title": "Fagaaraha Ardayda",
+                "vibe-subtitle": "Meel nabad ah oo loogu talagalay wada sheegeysi wanaagsan."
+            },
+            fr: {
+                "nav-about": "À Propos",
+                "nav-houses": "Maisons de Couleur",
+                "nav-study": "Salon d'Étude",
+                "nav-programs": "Programmes",
+                "nav-resources": "Centre de Ressources",
+                "nav-leaderboard": "Classement",
+                "nav-vibe": "Forum Vibe",
+                "btn-login": "Connexion",
+                "btn-join": "Rejoindre",
+                "hero-badge": "Guilde Internationale des Étudiants",
+                "hero-title-main": "Propulsez Votre Parcours Académique",
+                "hero-subtext": "Connectez-vous avec des lycéens à travers 4 maisons ludiques. Sessions d'étude Pomodoro 24/7, tutorat et cours d'entrepreneuriat.",
+                "btn-quiz": "Trouver Votre Maison",
+                "btn-lounge": "Entrer dans le Salon",
+                "stat-scholars": "Étudiants Actifs",
+                "stat-hours": "Heures d'Étude",
+                "stat-nations": "Pays Partenaires",
+                "stat-houses": "Maisons Ludiques",
+                "about-title": "À Propos de PulseScholars",
+                "about-desc": "PulseScholars Network est un écosystème étudiant international conçu spécifiquement pour les élèves du secondaire (9e à 12e année).",
+                "g9-title": "9e Année - Navigateurs",
+                "g9-desc": "Adaptation au lycée, intégration et habitudes d'étude fondamentales.",
+                "g10-title": "10e Année - Bâtisseurs",
+                "g10-desc": "Techniques d'étude efficaces et suivi des habitudes Pomodoro.",
+                "g11-title": "11e Année - Champions",
+                "g11-desc": "Préparation au SAT, STEM et compétitions académiques.",
+                "g12-title": "12e Année - Mentors Legacy",
+                "g12-desc": "Admissions universitaires, bourses et entrepreneuriat.",
+                "exec-title": "Architecture du Comité Exécutif",
+                "houses-title": "Les Quatre Maisons de Couleur",
+                "houses-desc": "Chaque membre est assigné à l'une des quatre maisons. Gagnez des points grâce aux heures d'étude vérifiées!",
+                "hp-desc": "Maison Phoenix - Passion et Détermination.",
+                "ht-desc": "Maison Titan - Stratégie et Logique.",
+                "hs-desc": "Maison Sage - Sagesse et Croissance.",
+                "hsol-desc": "Maison Sol - Créativité et Énergie.",
+                "lounge-title": "Espace de Co-Working Virtuel",
+                "lounge-subtitle": "Sélectionnez votre ambiance sonore et lancez votre session de concentration.",
+                "prog-title": "Programmes Académiques et Entrepreneuriat",
+                "res-title": "Coffre-Fort de Ressources",
+                "res-subtitle": "Téléchargez des modèles, des planificateurs et des résumés de livres.",
+                "lead-title": "Classement Général des Maisons",
+                "lead-subtitle": "Les points sont mis à jour quotidiennement.",
+                "vibe-title": "Forum Vibe et Cercle d'Échange",
+                "vibe-subtitle": "Un environnement discipliné pour échanger librement et partager des conseils."
+            },
+            ar: {
+                "nav-about": "عن الشبكة",
+                "nav-houses": "منازل الألوان",
+                "nav-study": "قاعة الدراسة",
+                "nav-programs": "البرامج",
+                "nav-resources": "مركز المصادر",
+                "nav-leaderboard": "لوحة الصدارة",
+                "nav-vibe": "منتدى الطلاب",
+                "btn-login": "تسجيل الدخول",
+                "btn-join": "انضمام للرابطة",
+                "hero-badge": "رابطة الطلاب الدولية ومركز القيادة",
+                "hero-title-main": "عزز رحلتك الأكاديمية",
+                "hero-subtext": "تواصل مع طلاب الثانوية عبر 4 منازل ملونة. جلسات دراسة على مدار الساعة، تحضير لـ SAT، ونوادي الكتب وورش ريادة الأعمال.",
+                "btn-quiz": "اكتشف منزلك الأكاديمي",
+                "btn-lounge": "دخول قاعة الدراسة الافتراضية",
+                "stat-scholars": "طلاب نشطون",
+                "stat-hours": "ساعات الدراسة",
+                "stat-nations": "دول شريكة",
+                "stat-houses": "منازل ملونة",
+                "about-title": "عن شبكة PulseScholars",
+                "about-desc": "PulseScholars Network هي بيئة تعليمية دولية عبر الإنترنت مخصصة لطلاب المرحلة الثانوية (من الصف 9 إلى 12).",
+                "g9-title": "الصف 9 - المكتشفون",
+                "g9-desc": "التركيز على التأقلم مع المرحلة الثانوية وبناء عادات الدراسة الأساسية.",
+                "g10-title": "الصف 10 - بناة المهارات",
+                "g10-desc": "التركيز على تقنيات الدراسة الفعالة وتتبع عادات بومودورو.",
+                "g11-title": "الصف 11 - أبطال التحدي",
+                "g11-desc": "التركيز على تحضير SAT والمسابقات العلمية والأكاديمية.",
+                "g12-title": "الصف 12 - القادة الموجهون",
+                "g12-desc": "التركيز على القبول الجامعي والمنح الدراسية وريادة الأعمال.",
+                "exec-title": "الهيكل التنفيذي للرابطة",
+                "houses-title": "منازل الألوان الأربعة",
+                "houses-desc": "يتم توزيع كل عضو على أحد المنازل الأربعة. اكتسب النقاط لمنزلك من خلال ساعات الدراسة الموثقة!",
+                "hp-desc": "منزل فينكس - الشغف والتركيز والإصرار.",
+                "ht-desc": "منزل تايتان - الاستراتيجية والمنطق والتفكير العلمي.",
+                "hs-desc": "منزل سيج - الحكمة والنمو ومساعدة الزملاء.",
+                "hsol-desc": "منزل سول - الإبداع والابتكار والفعاليات القيادية.",
+                "lounge-title": "قاعة الدراسة والدراسة الجماعية",
+                "lounge-subtitle": "اختر الصوت الخلفي وابدأ جلسة التركيز الخاصة بك.",
+                "prog-title": "البرامج الأكاديمية وريادة الأعمال",
+                "res-title": "خزنة المصادر والكتب",
+                "res-subtitle": "تحميل القوالب الموثوقة ومخططات الاختبارات وملخصات الكتب.",
+                "lead-title": "لوحة صدارة المنازل العالمية",
+                "lead-subtitle": "تتم تحديث النقاط يومياً بناءً على ساعات الدراسة والأنشطة.",
+                "vibe-title": "منتدى الطلاب وحلقات النقاش",
+                "vibe-subtitle": "بيئة آمنة ومنضبطة للطلاب للتحدث بحرية وتبادل الخبرات."
+            }
+        };
+
+        // CURRENT USER STATE & LOCAL STORAGE CHECK
+        let currentUser = JSON.parse(localStorage.getItem('pulseUser')) || null;
+        let activeTimer = null;
+        let timerSeconds = 1500; // 25 mins default
+        let isTimerRunning = false;
+        let audioContext = null;
+
+        // INITIALIZE ON DOM LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUserUI();
+            startTypingEffect();
+        });
+
+        // LANGUAGE CHANGE ENGINE
+        function changeLanguage(langKey) {
+            const html = document.documentElement;
+            if (langKey === 'ar') {
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+            } else {
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', langKey);
+            }
+
+            const dict = translations[langKey] || translations['en'];
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (dict[key]) {
+                    element.textContent = dict[key];
+                }
+            });
+        }
+
+        // TYPING EFFECT IN HERO
+        function startTypingEffect() {
+            const phrases = [
+                "🎯 Master High School STEM & Beyond.",
+                "🔥 24/7 Silent Pomodoro Study Rooms.",
+                "🏆 4 Gamified Color House Battles.",
+                "📚 SAT Prep & Entrepreneur Pitching."
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const target = document.getElementById('heroTypingText');
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+                if (isDeleting) {
+                    target.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    target.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(type, 2000);
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 500);
+                } else {
+                    setTimeout(type, isDeleting ? 40 : 80);
+                }
+            }
+            type();
+        }
+
+        // TIMER SYSTEM
+        function setTimerMode(mode) {
+            clearInterval(activeTimer);
+            isTimerRunning = false;
+            document.getElementById('timerToggleBtn').textContent = "Start Session";
+
+            document.getElementById('modeFocus').className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition";
+            document.getElementById('modeShort').className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition";
+            document.getElementById('modeLong').className = "px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition";
+
+            if (mode === 'focus') {
+                timerSeconds = 1500;
+                document.getElementById('modeFocus').className = "px-3 py-1.5 rounded-lg bg-pulse text-navy-950 font-bold transition";
+                document.getElementById('timerLabel').textContent = "Stay Disciplined • Silence Notifications";
+            } else if (mode === 'short') {
+                timerSeconds = 300;
+                document.getElementById('modeShort').className = "px-3 py-1.5 rounded-lg bg-house-sage text-navy-950 font-bold transition";
+                document.getElementById('timerLabel').textContent = "Take a 5-Minute Hydration Break";
+            } else if (mode === 'long') {
+                timerSeconds = 900;
+                document.getElementById('modeLong').className = "px-3 py-1.5 rounded-lg bg-gold-500 text-navy-950 font-bold transition";
+                document.getElementById('timerLabel').textContent = "Deep Rest • Step Away From Screens";
+            }
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            const mins = Math.floor(timerSeconds / 60);
+            const secs = timerSeconds % 60;
+            document.getElementById('timerDisplay').textContent = 
+                `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function toggleTimer() {
+            if (isTimerRunning) {
+                clearInterval(activeTimer);
+                isTimerRunning = false;
+                document.getElementById('timerToggleBtn').textContent = "Resume Session";
+            } else {
+                isTimerRunning = true;
+                document.getElementById('timerToggleBtn').textContent = "Pause Session";
+                activeTimer = setInterval(() => {
+                    if (timerSeconds > 0) {
+                        timerSeconds--;
+                        updateTimerDisplay();
+                    } else {
+                        clearInterval(activeTimer);
+                        isTimerRunning = false;
+                        alert("Pomodoro session completed! House Points updated.");
+                        setTimerMode('short');
+                    }
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            setTimerMode('focus');
+        }
+
+        // AMBIENT SOUND SIMULATOR
+        function setAudioTrack(type) {
+            document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('border-pulse', 'bg-pulse/20'));
+            const btn = document.getElementById(`sound${type.charAt(0).toUpperCase() + type.slice(1)}`);
+            if (btn) btn.classList.add('border-pulse', 'bg-pulse/20');
+            
+            // Simple synth ambient feedback cue
+            try {
+                if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioContext.createOscillator();
+                const gain = audioContext.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(type === 'lofi' ? 220 : type === 'waves' ? 150 : 330, audioContext.currentTime);
+                gain.gain.setValueAtTime(0.05, audioContext.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 1.5);
+                osc.connect(gain);
+                gain.connect(audioContext.destination);
+                osc.start();
+                osc.stop(audioContext.currentTime + 1.5);
+            } catch(e){}
+        }
+
+        // RESOURCE SEARCH FILTER ENGINE
+        function filterResources() {
+            const query = document.getElementById('resourceSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.resource-item');
+            items.forEach(item => {
+                const keywords = item.getAttribute('data-keywords').toLowerCase();
+                const text = item.innerText.toLowerCase();
+                if (keywords.includes(query) || text.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // OUTREACH SCRIPT COPY FUNCTION
+        function copyPitchTemplate() {
+            const template = `Subject: Guest Speaker Invitation: PulseScholars Global High School Guild\n\nDear [Entrepreneur Name],\n\nMy name is [Your Name], Executive Director at PulseScholars Network. We run a global student guild connecting high school scholars across 28 nations.\n\nWe would be honored to invite you for a 30-minute virtual guest talk to share your journey with our scholars.\n\nBest regards,\nPulseScholars Executive Team`;
+            navigator.clipboard.writeText(template);
+            alert("Entrepreneur Outreach Pitch Template copied to clipboard!");
+        }
+
+        // COMMUNITY FORUM INTERACTION
+        function postForumMessage() {
+            const input = document.getElementById('forumInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+
+            const name = currentUser ? `${currentUser.name} (${currentUser.grade})` : "Guest Scholar";
+            const feed = document.getElementById('forumFeed');
+
+            const post = document.createElement('div');
+            post.className = "flex items-start gap-3 text-xs border-l-2 border-pulse pl-2 py-1";
+            post.innerHTML = `
+                <div class="w-7 h-7 rounded-full bg-pulse/20 border border-pulse text-pulse flex items-center justify-center font-bold shrink-0"> You </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-bold text-white">${name}</span>
+                        <span class="text-[10px] text-slate-500">Just now</span>
+                    </div>
+                    <p class="text-slate-200 mt-1">${msg}</p>
+                </div>
+            `;
+            feed.prepend(post);
+            input.value = "";
+        }
+
+        // MANDATORY PROGRAM ACCESS GATE
+        function accessProgram(progTitle) {
+            if (!currentUser) {
+                alert(`Sign In Required: Access to '${progTitle}' video curriculum requires a free student sign in.`);
+                toggleAuthModal();
+            } else {
+                alert(`Access Granted! Welcome ${currentUser.name}. Opening '${progTitle}' video modules.`);
+                window.open("https://www.youtube.com/@pulsescholarnetwork", "_blank");
+            }
+        }
+
+        // AUTHENTICATION MODAL LOGIC
+        function toggleAuthModal() {
+            const modal = document.getElementById('authModal');
+            modal.classList.toggle('hidden');
+        }
+
+        function handleAuthSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('authName').value;
+            const grade = document.getElementById('authGrade').value;
+
+            currentUser = { name, grade };
+            localStorage.setItem('pulseUser', JSON.stringify(currentUser));
+            updateUserUI();
+            toggleAuthModal();
+            alert(`Welcome aboard, ${name}! Your account is now active.`);
+        }
+
+        function updateUserUI() {
+            const authBtnText = document.getElementById('authBtnText');
+            if (currentUser) {
+                authBtnText.textContent = `${currentUser.name}`;
+            } else {
+                authBtnText.textContent = "Sign In";
+            }
+        }
+
+        // HOUSE QUIZ MODAL
+        function openHouseQuizModal() {
+            document.getElementById('quizModal').classList.remove('hidden');
+            document.getElementById('quizContent').classList.remove('hidden');
+            document.getElementById('quizResult').classList.add('hidden');
+        }
+
+        function closeHouseQuizModal() {
+            document.getElementById('quizModal').classList.add('hidden');
+        }
+
+        function submitQuiz(houseName) {
+            document.getElementById('quizContent').classList.add('hidden');
+            const result = document.getElementById('quizResult');
+            result.classList.remove('hidden');
+
+            const title = document.getElementById('quizResultTitle');
+            const desc = document.getElementById('quizResultDesc');
+
+            if (houseName === 'Phoenix') {
+                title.textContent = "House Phoenix Assigned! (Crimson Red)";
+                desc.textContent = "You embody unwavering resilience, grit, and study marathon focus.";
+            } else if (houseName === 'Titan') {
+                title.textContent = "House Titan Assigned! (Sapphire Blue)";
+                desc.textContent = "You excel in STEM logic, problem solving, and strategic competition.";
+            } else if (houseName === 'Sage') {
+                title.textContent = "House Sage Assigned! (Emerald Green)";
+                desc.textContent = "You value deep reading, peer tutoring, and continuous self-growth.";
+            } else {
+                title.textContent = "House Sol Assigned! (Amber Gold)";
+                desc.textContent = "You bring energy, creative innovation, and youth leadership events.";
+            }
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+    </script>
+    <script>
+    // Audio links mapping with your provided URLs
+    const audioTracks = {
+        lofi: 'https://upload.wikimedia.org/wikipedia/commons/d/d8/Loyalty_Freak_Music_-_05_-_Love_They.ogg',
+        waves: 'https://upload.wikimedia.org/wikipedia/commons/c/c8/Pure_Alpha_Waves_7_to_12%2C9_Hz_Binaural_Beats_V3.wav',
+        rain: 'https://upload.wikimedia.org/wikipedia/commons/4/41/Rain_against_the_window.ogg'
+    };
+
+    let activeTrackKey = null;
+
+    function setAudioTrack(trackKey) {
+        const player = document.getElementById('ambientAudio');
+
+        // Toggle pause if clicking the active track again
+        if (activeTrackKey === trackKey && !player.paused) {
+            player.pause();
+            activeTrackKey = null;
+            clearActiveStyles();
+            return;
+        }
+
+        // Play the selected track
+        if (audioTracks[trackKey]) {
+            player.src = audioTracks[trackKey];
+            player.play();
+            activeTrackKey = trackKey;
+            highlightActiveButton(trackKey);
+        }
+    }
+
+    function highlightActiveButton(trackKey) {
+        clearActiveStyles();
+        const buttonMap = {
+            lofi: 'soundLofi',
+            waves: 'soundWaves',
+            rain: 'soundRain'
+        };
+
+        const activeButton = document.getElementById(buttonMap[trackKey]);
+        if (activeButton) {
+            activeButton.classList.add('ring-2', 'ring-amber-400', 'bg-slate-800');
+        }
+    }
+
+    function clearActiveStyles() {
+        document.querySelectorAll('.audio-btn').forEach(btn => {
+            btn.classList.remove('ring-2', 'ring-amber-400', 'bg-slate-800');
+        });
+    }
+    
+</script>
+</body>
+</html>
